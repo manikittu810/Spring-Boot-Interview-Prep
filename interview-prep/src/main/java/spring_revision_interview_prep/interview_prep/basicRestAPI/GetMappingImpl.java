@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path="/api")
-public class CreateUser {
+public class GetMappingImpl {
     @GetMapping(path="/fetch")
     public String fetchUser(){
         return "User details fetched";
