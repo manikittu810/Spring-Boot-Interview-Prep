@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import spring_revision_interview_prep.interview_prep.scope.userClass.User1;
 
 @RestController
-@RequestMapping(path="/testt-scope")
+@RequestMapping(path="/test-scope")
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class TestController2 {
     @Autowired
