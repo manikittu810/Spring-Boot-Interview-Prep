@@ -1,4 +1,4 @@
-package spring_revision_interview_prep.interview_prep.basicRestAPI.annotationsExamples;
+package spring_revision_interview_prep.interview_prep.annotationsExamples;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
