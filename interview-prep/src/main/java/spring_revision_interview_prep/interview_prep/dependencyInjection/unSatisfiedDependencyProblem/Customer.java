@@ -17,30 +17,38 @@ public class Customer {
 //    @Qualifier("OnlineOrder")
 //    Order order;
 
-    //Below is the Industry Standard -> Based on Client Value;
-    @Qualifier("OnlineOrder")
+    //1st solution -> Below is the Industry Standard -> Based on Client Value;
+//    @Qualifier("OnlineOrder")
+//    @Autowired
+//     Order onlineOrder;
+//
+//    @Qualifier("OfflineOrder")
+//    @Autowired
+//    Order offlineOrder;
+
+    //2nd solution
+
     @Autowired
-     Order onlineOrder;
-
-    @Qualifier("OfflineOrder")
-    @Autowired
-    Order offlineOrder;
+    Order order;
 
 
-
-//    @PostMapping(path = "/createOrder")
-//    public ResponseEntity<String> createOrder(){
-//        order.createOrder();
-//        return ResponseEntity.status(HttpStatus.OK).body("Order Created...");
-//    }
-@PostMapping(path = "/createOrder")
-public ResponseEntity<String> createOrder(@RequestParam boolean isOnlineOrder){
-    if(isOnlineOrder){
-        onlineOrder.createOrder();
-    }else{
-        offlineOrder.createOrder();
+    @PostMapping(path = "/createOrder")
+    public ResponseEntity<String> createOrder(){
+        order.createOrder();
+        return ResponseEntity.status(HttpStatus.OK).body("Order Created...");
     }
 
-    return ResponseEntity.status(HttpStatus.OK).body("Order Created...");
-}
+
+
+
+//@PostMapping(path = "/createOrder")
+//public ResponseEntity<String> createOrder(@RequestParam boolean isOnlineOrder){
+//    if(isOnlineOrder){
+//        onlineOrder.createOrder();
+//    }else{
+//        offlineOrder.createOrder();
+//    }
+//
+//    return ResponseEntity.status(HttpStatus.OK).body("Order Created...");
+//}
 }
