@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConditionalOnProperty(prefix="MySQLCon",value = "enabled",havingValue="true",matchIfMissing = false)
+@ConditionalOnProperty(prefix="mysqlcon",value = "enabled",havingValue="true",matchIfMissing = false)
 public class MySQLConnection {
     public MySQLConnection(){
         System.out.println("MySQLConnection established.....");
