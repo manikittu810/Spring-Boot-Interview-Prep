@@ -57,6 +57,10 @@ public class WithinImpl {
 //    }
     //-------------------------------------------------------------------
 
-
+    //target -> This pointcut matches any method on a particular instance of a class
+@Before("target(spring_revision_interview_prep.interview_prep.aspectOrientedProgramming.basicExample.EmployeeUtil)")
+    public void interceptorForEmployee(){
+    System.out.println("Interceptor for Employee Invoked");
+}
 
 }
