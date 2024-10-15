@@ -9,42 +9,21 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-<!--	<distributionManagement>-->
-<!--		<repository>-->
-<!--			<id>github</id>-->
-<!--			<name>GitHub Repository</name>-->
-<!--			<url>https://maven.pkg.github.com/manikittu810/deploy-test</url>-->
-<!--		</repository>-->
-<!--	</distributionManagement>-->
-
-
 	<groupId>spring-revision-interview-prep</groupId>
 	<artifactId>interview-prep</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>interview-prep-practice</name>
 	<description>Demo project for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -73,6 +52,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
 	<profiles>
 		<profile>
 			<id>production</id>
