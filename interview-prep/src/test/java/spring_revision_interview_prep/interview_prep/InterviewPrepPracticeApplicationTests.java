@@ -8,6 +8,7 @@ class InterviewPrepPracticeApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("Testing this file is Successful");
 	}
 
 }
