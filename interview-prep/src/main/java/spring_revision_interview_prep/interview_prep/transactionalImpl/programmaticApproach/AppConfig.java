@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.sql.DataSource;
@@ -30,6 +31,13 @@ public class AppConfig {
     @Bean
     public TransactionTemplate transactionManagerImpl(PlatformTransactionManager transactionManager){
         return new TransactionTemplate(transactionManager);
+    }
+    @Bean
+    public TransactionTemplate transactionTemplate(PlatformTransactionManager userTransactionManager2){
+        TransactionTemplate transactionTemplate = new TransactionTemplate(userTransactionManager2);
+        transactionTemplate.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+        transactionTemplate.setName("Testing -> Propagation REQUIRED USING TRANSACTION TEMPLATE");
+        return transactionTemplate;
     }
 
 }
