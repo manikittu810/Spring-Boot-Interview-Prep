@@ -1,4 +1,4 @@
-package spring_revision_interview_prep.interview_prep.transactionalImpl.propagation;
+package spring_revision_interview_prep.interview_prep.transactionalImpl.propagation.declarativeTransactionManagementApproach;
 
 
 import org.springframework.stereotype.Component;
